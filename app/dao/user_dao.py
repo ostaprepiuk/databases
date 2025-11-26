@@ -5,11 +5,9 @@ from app import db
 from sqlalchemy import func
 
 class UserDAO:
-    # Базовий READ
     def find_all(self):
         return User.query.all()
     
-    # 1. Запит M:1 (Місто -> Користувачі)
     def get_users_by_city(self):
         results = db.session.query(
             Address.city,
@@ -21,7 +19,6 @@ class UserDAO:
          
         return [{'city': city, 'users': users.split(', ')} for city, users in results]
     
-    # 2. Запит M:M (Годинник -> Користувачі)
     def get_watch_users(self):
         results = db.session.query(
             Smartwatch.serial_number,

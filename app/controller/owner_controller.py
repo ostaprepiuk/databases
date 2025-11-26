@@ -34,13 +34,10 @@ def update_owner(owner_id):
         return jsonify(owner_schema.dump(updated_owner))
     return jsonify({'message': 'Owner not found'}), 404
 
-# app/controller/owner_controller.py (ВИПРАВЛЕНА ФУНКЦІЯ DELETE)
 
 @owner_bp.route('/<int:owner_id>', methods=['DELETE'])
 def delete_owner(owner_id):
     if owner_service.delete_owner(owner_id):
-        # Змінюємо статус на 200 і додаємо JSON-тіло
         return jsonify({'message': 'Дані власника успішно видалено'}), 200
     
-    # Якщо власника не знайдено (власник = None), повертаємо 404
     return jsonify({'message': 'Owner not found'}), 404
