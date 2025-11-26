@@ -1,0 +1,14 @@
+# Virtual environment
+/venv
+/.vscode
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Database and private files
+# Якщо ви вирішили не приховувати пароль, залиште config.py,
+# але приховуємо будь-які файли з даними, що генеруються.
+
+# Logs and generated files
+*.log

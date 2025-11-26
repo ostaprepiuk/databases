@@ -1,0 +1,9 @@
+# Конфігурація бази даних
+database:
+  dialect: mysql
+  driver: pymysql
+  username: root
+  password: olia1311
+  host: localhost
+  port: 3306
+  name: lab3
