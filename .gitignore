@@ -11,4 +11,4 @@ __pycache__/
 # але приховуємо будь-які файли з даними, що генеруються.
 
 # Logs and generated files
-*.log
+*.log 
